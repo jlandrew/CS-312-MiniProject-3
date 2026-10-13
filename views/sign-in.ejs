@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" 
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <title>Sign-in</title>
+        <link rel='stylesheet' type="text/css" href='styles/style.css'>
+    </head>
+    
+    <body>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <h2>Blog Web Application</h2>
+            </div>
+        </nav>
+        <div class="container mt-5">
+            <div class="card col-6" style="justify-self: center; height: 80vh;">
+                <div class="card-body" style="position: relative;">
+                    <h3 style="justify-self: center;" class="my-4">Sign in!</h3>
+                    <form action="/login" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="tryUser" class="rounded form-control mb-3" 
+                                placeholder="Enter username..." style="width: 95%; justify-self: center;">
+                            <input type="password" name="tryPass" class="rounded form-control mb-3" 
+                                placeholder="Enter password..." autocomplete="off"
+                                style="width: 95%; justify-self: center;">
+                        </div>
+                            <button class="btn" style="height: 40px; justify-content: center; position: absolute; right: 5%;" 
+                                >Sign In</button>
+                    </form>
+                    <% if (!userCorrect) { %>
+                        <p class="ms-3">Username or password incorrect!</p>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" 
+        crossorigin="anonymous"></script>
+        <script src="/miniProject2/script.js"></script>
+    </body>
+</html>
